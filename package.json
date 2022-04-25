@@ -1,0 +1,19 @@
+{
+  "name": "fraorion.github.io",
+  "version": "1.0.0",
+  "description": "ohmyfood P3 AC",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FRAOrion/fraorion.github.io.git"
+  },
+  "author": "Argot Cedric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FRAOrion/fraorion.github.io/issues"
+  },
+  "homepage": "https://github.com/FRAOrion/fraorion.github.io#readme"
+}

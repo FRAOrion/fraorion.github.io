@@ -1,41 +1,8 @@
-// Déclaration des variables
-
-$primary: #9356DC;
-$secondary: #FF79DA;
-$third: #99E2D0;
-
-
-* {
-    font-family: "Roboto", sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, .title {
-    font-family: "Shrikhand", sans-serif;
-}
-
-// Body
-
-body {
-    margin: 0;
-    background-color: #f6f6f6;
-}
-
-// Header
-
-header {
-    font-size: 30px;
-    text-align: center;
-    background-color: white;
-    position: relative;
-    box-shadow: 0 3px 5px lightgray;
-
-    p {
-        margin: 0;
-        padding: 10px 0;
-    }
-}
-
-// Main
+@import "./utils/variables";
+@import "./base/base";
+@import "./base/typography";
+@import "./layouts/header";
+@import "./layouts/footer";
 
 #active-location {
     display: flex;

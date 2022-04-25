@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -6,9 +11,9 @@ h1, h2, h3, h4, h5, h6, .title {
   font-family: "Shrikhand", sans-serif;
 }
 
-body {
-  margin: 0;
-  background-color: #f6f6f6;
+a {
+  text-decoration: none;
+  color: black;
 }
 
 header {
@@ -21,6 +26,32 @@ header {
 header p {
   margin: 0;
   padding: 10px 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: #353535;
+  color: white;
+}
+footer .title {
+  font-size: larger;
+  margin: 0;
+}
+
+.footer__ul {
+  padding: 0;
+  list-style: none;
+}
+.footer__ul li {
+  padding: 5px 0;
+}
+.footer__ul li i {
+  padding: 0 10px 0 0;
+}
+.footer__ul li a {
+  color: white;
 }
 
 #active-location {

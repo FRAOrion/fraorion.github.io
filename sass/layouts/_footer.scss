@@ -1,0 +1,32 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #353535;
+    color: white;
+
+    .title {
+        font-size: larger;
+        margin: 0;
+    }
+}
+
+.footer {    
+    &__ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            padding: 5px 0;
+
+            i {
+                padding: 0 10px 0 0;
+            }
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+}
