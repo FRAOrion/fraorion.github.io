@@ -1,0 +1,74 @@
+// Déclaration des variables
+
+$primary: #9356DC;
+$secondary: #FF79DA;
+$third: #99E2D0;
+
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+    font-family: "Shrikhand", sans-serif;
+}
+
+// Body
+
+body {
+    margin: 0;
+    background-color: #f6f6f6;
+}
+
+// Header
+
+header {
+    font-size: 30px;
+    text-align: center;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 3px 5px lightgray;
+
+    p {
+        margin: 0;
+        padding: 10px 0;
+    }
+}
+
+// Main
+
+#active-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #353535;
+    font-weight: 500;
+    background-color: #eaeaea;
+
+    i {
+        padding: 0 15px 0 0;
+    }
+}
+
+#find-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+
+    p {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .big {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    .tight {
+        color: #353535;
+        font-size: 17px;
+        font-weight: 300;
+    }
+}
