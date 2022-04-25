@@ -1,6 +1,8 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/base";
 @import "./base/typography";
+@import "./components/btn";
 @import "./layouts/header";
 @import "./layouts/footer";
 
@@ -21,7 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10%;
+    padding: 25px;
 
     p {
         margin: 10px 0;
