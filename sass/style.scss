@@ -3,6 +3,7 @@
 @import "./base/base";
 @import "./base/typography";
 @import "./components/btn";
+@import "./components/card";
 @import "./layouts/header";
 @import "./layouts/footer";
 
@@ -46,11 +47,6 @@
 #functioning {
     padding: 25px;
 
-    p {
-        font-size: 25px;
-        font-weight: bold;
-    }
-
     ul {
         padding: 0;
         list-style: none;
@@ -91,4 +87,9 @@
         border-radius: 10px;
         background-color: $primary;
     }
+}
+
+#restaurants {
+    padding: 25px;
+    background-color: #f6f6f6;
 }

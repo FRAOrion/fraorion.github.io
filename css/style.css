@@ -15,6 +15,11 @@ a {
   color: black;
 }
 
+.section__title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .btn {
   margin: 15px 0;
   padding: 5px 20px;
@@ -26,6 +31,59 @@ a {
 .btn--pink {
   color: white;
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px 0;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px lightgrey;
+}
+.card__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  object-fit: cover;
+  overflow: hidden;
+  height: 70%;
+  border-radius: 15px 15px 0 0;
+}
+.card__new {
+  position: absolute;
+  right: 0;
+  padding: 10px 15px;
+  font-weight: 500;
+  color: #2c9c81;
+  background-color: #99E2D0;
+  border-radius: 5px;
+}
+.card__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 30%;
+}
+.card__content p {
+  margin: 5px 0;
+}
+.card__content--title {
+  font-weight: bold;
+  font-size: larger;
+}
+.card__content--desc {
+  font-weight: 300;
+}
+.card__content__right {
+  border: 5px black;
+}
+.card__content__right i:hover {
+  color: #9356DC;
+  color: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
 }
 
 header {
@@ -102,10 +160,6 @@ footer .title {
 #functioning {
   padding: 25px;
 }
-#functioning p {
-  font-size: 25px;
-  font-weight: bold;
-}
 #functioning ul {
   padding: 0;
   list-style: none;
@@ -140,6 +194,11 @@ footer .title {
   text-align: center;
   border-radius: 10px;
   background-color: #9356DC;
+}
+
+#restaurants {
+  padding: 25px;
+  background-color: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */
