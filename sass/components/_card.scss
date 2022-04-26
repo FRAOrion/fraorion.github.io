@@ -8,18 +8,23 @@
     @include box-shadow;
 
     &__img {
+        position: relative;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        object-fit: cover;
-        overflow: hidden;
+        // flex-direction: column;
         height: 70%;
-        border-radius: 15px 15px 0 0;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            // overflow: hidden;
+            border-radius: 15px 15px 0 0;        
+        }
     }
 
     &__new {
         position: absolute;
-        right: 0;
+        top: 15px;
+        right: 15px;
         padding: 10px 15px;
         font-weight: 500;
         color: darken($third, 35%);
@@ -49,11 +54,15 @@
         }
 
         &__right {
-            border: 5px black;
+            height: 20px;
+            background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+            background-color: text;
+            -webkit-background-clip: text;
 
             i:hover {
-                color: $primary;
-                color: linear-gradient(0deg, $secondary 0%, $primary 100%);
+                color: transparent;
+                vertical-align: middle;
+                cursor: pointer;
             }
         }
     }
