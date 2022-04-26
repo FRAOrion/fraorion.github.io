@@ -80,16 +80,12 @@ a {
 .card__content--desc {
   font-weight: 300;
 }
-.card__content__right {
-  height: 20px;
+.card__content__right i:hover:before {
   background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-  background-color: text;
   -webkit-background-clip: text;
-}
-.card__content__right i:hover {
-  color: transparent;
-  vertical-align: middle;
-  cursor: pointer;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  display: initial;
 }
 
 header {

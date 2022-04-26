@@ -10,13 +10,11 @@
     &__img {
         position: relative;
         display: flex;
-        // flex-direction: column;
         height: 70%;
 
         img {
             width: 100%;
             object-fit: cover;
-            // overflow: hidden;
             border-radius: 15px 15px 0 0;        
         }
     }
@@ -54,15 +52,12 @@
         }
 
         &__right {
-            height: 20px;
-            background: linear-gradient(0deg, $secondary 0%, $primary 100%);
-            background-color: text;
-            -webkit-background-clip: text;
-
-            i:hover {
-                color: transparent;
-                vertical-align: middle;
-                cursor: pointer;
+            i:hover:before {
+                background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+                display: initial;
             }
         }
     }
