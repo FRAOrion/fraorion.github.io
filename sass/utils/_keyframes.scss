@@ -1,0 +1,32 @@
+@keyframes loader {
+    0% {
+        opacity: 100%;
+        backdrop-filter: blur(10px);
+    }
+    20% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 90%;
+        backdrop-filter: blur(7px);
+    }
+    85%{
+        opacity: 10%;
+    }
+    100% {
+        opacity: 0%;
+        backdrop-filter: blur(0px);
+    }
+}
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 7px white;
+    }
+    60% {
+        text-shadow: 0 0 7px grey;
+    }
+    100% {
+        text-shadow: 0 0 7px white;
+    }
+}

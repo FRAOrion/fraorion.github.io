@@ -1,3 +1,34 @@
+@keyframes loader {
+  0% {
+    opacity: 100%;
+    backdrop-filter: blur(10px);
+  }
+  20% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 90%;
+    backdrop-filter: blur(7px);
+  }
+  85% {
+    opacity: 10%;
+  }
+  100% {
+    opacity: 0%;
+    backdrop-filter: blur(0px);
+  }
+}
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 7px white;
+  }
+  60% {
+    text-shadow: 0 0 7px grey;
+  }
+  100% {
+    text-shadow: 0 0 7px white;
+  }
+}
 body {
   margin: 0;
 }
@@ -80,8 +111,10 @@ a {
 .card__content--desc {
   font-weight: 300;
 }
-.card__content__right i:hover:before {
+
+.heart--like:hover:before {
   background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
@@ -94,6 +127,11 @@ header {
   background-color: white;
   position: relative;
   box-shadow: 0 3px 5px lightgray;
+}
+header i {
+  position: absolute;
+  top: 30px;
+  left: 20px;
 }
 header p {
   margin: 0;
@@ -124,6 +162,24 @@ footer .title {
 }
 .footer__ul li a {
   color: white;
+}
+
+.loader {
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  animation: 4s ease-out 0s forwards loader;
+}
+.loader i {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: grey;
+  animation: 1.5s linear 0s infinite glowing;
 }
 
 #active-location {
@@ -199,6 +255,34 @@ footer .title {
 #restaurants {
   padding: 25px;
   background-color: #f6f6f6;
+}
+
+.background--image {
+  display: flex;
+}
+.background--image img {
+  overflow: hidden;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  padding: 15px;
+}
+.menu__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.menu__top p {
+  margin: 0;
+}
+.menu__top i {
+  padding: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
