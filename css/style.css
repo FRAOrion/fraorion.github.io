@@ -202,30 +202,65 @@ body {
 }
 .menu__appetizers ul li {
   margin: 15px 0;
-  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
   border-radius: 15px;
+  overflow: hidden;
   box-shadow: 0 4px 6px lightgrey;
+}
+.menu__appetizers ul li:hover {
+  cursor: pointer;
+}
+.menu__appetizers ul li:hover .menu__right {
+  transform: translateX(-62px);
+}
+.menu__appetizers ul li:hover .menu__right i::before {
+  transform: rotate(360deg);
+}
+.menu__appetizers .menu__left {
+  padding: 10px;
 }
 .menu__appetizers .menu__left--name {
   margin: 0 0 5px 0;
   font-size: 1.2em;
   font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__appetizers .menu__left--desc {
   font-size: 0.9em;
   font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__appetizers .menu__right {
   display: flex;
   align-items: flex-end;
+  position: relative;
+  transition: all 0.4s ease-out;
 }
 .menu__appetizers .menu__right--price {
   font-weight: 600;
-  margin: 0 10px 0 0;
+  padding: 0 15px 15px 0;
+}
+.menu__appetizers .menu__right i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 60px;
+  color: white;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  left: 45px;
+}
+.menu__appetizers .menu__right i::before {
+  transition: all 0.4s ease-in-out;
 }
 .menu__meal * {
   margin: 0;
@@ -236,30 +271,65 @@ body {
 }
 .menu__meal ul li {
   margin: 15px 0;
-  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
   border-radius: 15px;
+  overflow: hidden;
   box-shadow: 0 4px 6px lightgrey;
+}
+.menu__meal ul li:hover {
+  cursor: pointer;
+}
+.menu__meal ul li:hover .menu__right {
+  transform: translateX(-62px);
+}
+.menu__meal ul li:hover .menu__right i::before {
+  transform: rotate(360deg);
+}
+.menu__meal .menu__left {
+  padding: 10px;
 }
 .menu__meal .menu__left--name {
   margin: 0 0 5px 0;
   font-size: 1.2em;
   font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__meal .menu__left--desc {
   font-size: 0.9em;
   font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__meal .menu__right {
   display: flex;
   align-items: flex-end;
+  position: relative;
+  transition: all 0.4s ease-out;
 }
 .menu__meal .menu__right--price {
   font-weight: 600;
-  margin: 0 10px 0 0;
+  padding: 0 15px 15px 0;
+}
+.menu__meal .menu__right i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 60px;
+  color: white;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  left: 45px;
+}
+.menu__meal .menu__right i::before {
+  transition: all 0.4s ease-in-out;
 }
 .menu__desserts * {
   margin: 0;
@@ -270,30 +340,65 @@ body {
 }
 .menu__desserts ul li {
   margin: 15px 0;
-  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
   border-radius: 15px;
+  overflow: hidden;
   box-shadow: 0 4px 6px lightgrey;
+}
+.menu__desserts ul li:hover {
+  cursor: pointer;
+}
+.menu__desserts ul li:hover .menu__right {
+  transform: translateX(-62px);
+}
+.menu__desserts ul li:hover .menu__right i::before {
+  transform: rotate(360deg);
+}
+.menu__desserts .menu__left {
+  padding: 10px;
 }
 .menu__desserts .menu__left--name {
   margin: 0 0 5px 0;
   font-size: 1.2em;
   font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__desserts .menu__left--desc {
   font-size: 0.9em;
   font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__desserts .menu__right {
   display: flex;
   align-items: flex-end;
+  position: relative;
+  transition: all 0.4s ease-out;
 }
 .menu__desserts .menu__right--price {
   font-weight: 600;
-  margin: 0 10px 0 0;
+  padding: 0 15px 15px 0;
+}
+.menu__desserts .menu__right i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 60px;
+  color: white;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  left: 45px;
+}
+.menu__desserts .menu__right i::before {
+  transition: all 0.4s ease-in-out;
 }
 
 * {

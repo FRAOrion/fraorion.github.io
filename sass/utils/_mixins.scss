@@ -6,6 +6,13 @@
     box-shadow: 0 6px 5px lightgrey;
 }
 
+@mixin text-wrap-dots {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    // width: 100%;
+}
+
 @mixin menu-stylin {
     * {
         margin: 0;
@@ -17,34 +24,67 @@
 
         li {
             margin: 15px 0;
-            padding: 10px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             background-color: white;
             border-radius: 15px;
+            overflow: hidden;
             @include box-shadow();
+            
+            &:hover {
+                cursor: pointer;
+                .menu__right {
+                    transform: translateX(-62px);
+
+                    i::before {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
         }
     }
 
     .menu__left {
+        padding: 10px;
         &--name {
             margin: 0 0 5px 0;
             font-size: 1.2em;
             font-weight: 600;
+            @include text-wrap-dots();
         }
         &--desc {
             font-size: 0.9em;
             font-weight: 400;
+            @include text-wrap-dots();
         }
     }
 
     .menu__right {
         display: flex;
         align-items: flex-end;
+        position: relative;
+        transition: all 0.4s ease-out;
         &--price {
             font-weight: 600;
-            margin: 0 10px 0 0;
+            padding: 0 15px 15px 0;
+        }
+
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            width: 60px;
+            color: white;
+            background-color: $third;
+            border-radius: 0 15px 15px 0;
+            left: 45px;
+
+            &::before {
+                transition: all 0.4s ease-in-out;
+            }
         }
     }
 }
