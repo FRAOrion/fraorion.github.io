@@ -2,16 +2,21 @@
     font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .title {
+.h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo, .menu__top h1 {
     font-family: "Shrikhand", sans-serif;
+}
+
+.logo__footer {
+    margin: 0;
+    font-size: 19px;
 }
 
 a {
     text-decoration: none;
     color: black;
-}
-
-.section__title {
-        font-size: 25px;
-        font-weight: bold;
 }

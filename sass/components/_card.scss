@@ -1,6 +1,4 @@
 .card {
-    display: flex;
-    flex-direction: column;
     margin: 0 0 20px 0;
     height: 250px;
     background-color: white;
@@ -49,6 +47,41 @@
 
         &--desc {
             font-weight: 300;
+        }
+
+        &__right {
+            background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+        }
+
+        &__right i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            // overflow: hidden;
+            z-index: 0;
+            position: relative;
+            
+            &:hover::after {
+                top: 10px;
+                border-radius: 0;
+            }
+
+            &::after {
+                content: "\f004";
+                font-weight: 900;
+                position: absolute;
+                top: 10px;
+                height: 100%;
+                width: 100%;
+                transition: all 0.5s;                
+                border-radius: 100% 100% 0 0;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-color: black;
+                z-index: -1;
+            }
         }
     }
 }

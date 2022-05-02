@@ -1,3 +1,48 @@
 @mixin box-shadow {    
     box-shadow: 0 4px 6px lightgrey;
 }
+
+@mixin box-shadow-stronger {
+    box-shadow: 0 6px 5px lightgrey;
+}
+
+@mixin menu-stylin {
+    * {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 15px 0;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 15px;
+            @include box-shadow();
+        }
+    }
+
+    .menu__left {
+        &--name {
+            margin: 0 0 5px 0;
+            font-weight: bold;
+        }
+        &--desc {
+            font-weight: 300;
+        }
+    }
+
+    .menu__right {
+        display: flex;
+        align-items: flex-end;
+        &--price {
+            font-weight: 500;
+            margin: 0 10px 0 0;
+        }
+    }
+}

@@ -5,9 +5,15 @@
     border-radius: 50px;
     font-size: 15px;
     @include box-shadow;
+    transition: 0.2s ease-in-out;
 
     &--pink {
         color: white;
         background: linear-gradient(0deg, $primary 0%, $secondary 100%);
+
+        &:hover {
+            background: linear-gradient(0deg, lighten($primary, 5%) 0%, lighten($secondary, 5%) 100%);
+            @include box-shadow-stronger;
+        }
     }
 }

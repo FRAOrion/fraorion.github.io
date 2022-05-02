@@ -2,6 +2,7 @@
   0% {
     opacity: 100%;
     backdrop-filter: blur(10px);
+    transform: scale(100%);
   }
   20% {
     opacity: 100%;
@@ -13,9 +14,16 @@
   85% {
     opacity: 10%;
   }
-  100% {
+  90% {
+    transform: scale(100%);
+  }
+  99% {
     opacity: 0%;
     backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 0%;
+    transform: scale(0%);
   }
 }
 @keyframes glowing {
@@ -29,143 +37,22 @@
     text-shadow: 0 0 7px white;
   }
 }
+@keyframes fill {
+  0% {
+    opacity: 0%;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
 body {
   margin: 0;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, .title {
-  font-family: "Shrikhand", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.section__title {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.btn {
-  margin: 15px 0;
-  padding: 15px 20px;
-  border: 0;
-  border-radius: 50px;
-  font-size: 15px;
-  box-shadow: 0 4px 6px lightgrey;
-}
-.btn--pink {
-  color: white;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 20px 0;
-  height: 250px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px lightgrey;
-}
-.card__img {
-  position: relative;
-  display: flex;
-  height: 70%;
-}
-.card__img img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 15px 15px 0 0;
-}
-.card__new {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 10px 15px;
-  font-weight: 500;
-  color: #2c9c81;
-  background-color: #99E2D0;
-  border-radius: 5px;
-}
-.card__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  height: 30%;
-}
-.card__content p {
-  margin: 5px 0;
-}
-.card__content--title {
-  font-weight: bold;
-  font-size: larger;
-}
-.card__content--desc {
-  font-weight: 300;
-}
-
-.heart--like:hover:before {
-  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  display: initial;
-}
-
-header {
-  font-size: 30px;
-  text-align: center;
-  background-color: white;
-  position: relative;
-  box-shadow: 0 3px 5px lightgray;
-}
-header i {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-}
-header p {
-  margin: 0;
-  padding: 10px 0;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  background-color: #353535;
-  color: white;
-}
-footer .title {
-  font-size: larger;
-  margin: 0;
-}
-
-.footer__ul {
-  padding: 0;
-  list-style: none;
-}
-.footer__ul li {
-  padding: 5px 0;
-}
-.footer__ul li i {
-  padding: 0 10px 0 0;
-}
-.footer__ul li a {
-  color: white;
-}
-
 .loader {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   height: 100%;
   width: 100%;
@@ -259,9 +146,11 @@ footer .title {
 
 .background--image {
   display: flex;
+  flex-direction: column;
+  margin: 0 0 -50px 0;
 }
 .background--image img {
-  overflow: hidden;
+  z-index: -1;
 }
 
 .menu {
@@ -283,6 +172,279 @@ footer .title {
 }
 .menu__top i {
   padding: 0 10px;
+}
+.menu__btn {
+  display: flex;
+  justify-content: center;
+}
+.menu__btn .btn {
+  padding: 15px 50px;
+}
+.menu .underline {
+  display: flex;
+  flex-direction: column;
+}
+.menu .underline::after {
+  content: "";
+  margin: 5px 0 0 0;
+  width: 40px;
+  border: 1px #99E2D0 solid;
+}
+.menu__appetizers * {
+  margin: 0;
+}
+.menu__appetizers ul {
+  list-style: none;
+  padding: 0;
+}
+.menu__appetizers ul li {
+  margin: 15px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px lightgrey;
+}
+.menu__appetizers .menu__left--name {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+.menu__appetizers .menu__left--desc {
+  font-weight: 300;
+}
+.menu__appetizers .menu__right {
+  display: flex;
+  align-items: flex-end;
+}
+.menu__appetizers .menu__right--price {
+  font-weight: 500;
+  margin: 0 10px 0 0;
+}
+.menu__meal * {
+  margin: 0;
+}
+.menu__meal ul {
+  list-style: none;
+  padding: 0;
+}
+.menu__meal ul li {
+  margin: 15px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px lightgrey;
+}
+.menu__meal .menu__left--name {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+.menu__meal .menu__left--desc {
+  font-weight: 300;
+}
+.menu__meal .menu__right {
+  display: flex;
+  align-items: flex-end;
+}
+.menu__meal .menu__right--price {
+  font-weight: 500;
+  margin: 0 10px 0 0;
+}
+.menu__desserts * {
+  margin: 0;
+}
+.menu__desserts ul {
+  list-style: none;
+  padding: 0;
+}
+.menu__desserts ul li {
+  margin: 15px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px lightgrey;
+}
+.menu__desserts .menu__left--name {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+.menu__desserts .menu__left--desc {
+  font-weight: 300;
+}
+.menu__desserts .menu__right {
+  display: flex;
+  align-items: flex-end;
+}
+.menu__desserts .menu__right--price {
+  font-weight: 500;
+  margin: 0 10px 0 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo, .menu__top h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+.logo__footer {
+  margin: 0;
+  font-size: 19px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  margin: 15px 0;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 50px;
+  font-size: 15px;
+  box-shadow: 0 4px 6px lightgrey;
+  transition: 0.2s ease-in-out;
+}
+.btn--pink {
+  color: white;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.btn--pink:hover {
+  background: linear-gradient(0deg, #a16be0 0%, #ff93e1 100%);
+  box-shadow: 0 6px 5px lightgrey;
+}
+
+.card {
+  margin: 0 0 20px 0;
+  height: 250px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px lightgrey;
+}
+.card__img {
+  position: relative;
+  display: flex;
+  height: 70%;
+}
+.card__img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.card__new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 10px 15px;
+  font-weight: 500;
+  color: #2c9c81;
+  background-color: #99E2D0;
+  border-radius: 5px;
+}
+.card__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 30%;
+}
+.card__content p {
+  margin: 5px 0;
+}
+.card__content--title {
+  font-weight: bold;
+  font-size: larger;
+}
+.card__content--desc {
+  font-weight: 300;
+}
+.card__content__right {
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+}
+.card__content__right i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  z-index: 0;
+  position: relative;
+}
+.card__content__right i:hover::after {
+  top: 10px;
+  border-radius: 0;
+}
+.card__content__right i::after {
+  content: "\f004";
+  font-weight: 900;
+  position: absolute;
+  top: 10px;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+  border-radius: 100% 100% 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: black;
+  z-index: -1;
+}
+
+header {
+  font-size: 30px;
+  text-align: center;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 3px 5px lightgray;
+}
+header i {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+header p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: #353535;
+  color: white;
+}
+footer .title {
+  font-size: larger;
+  margin: 0;
+}
+
+.footer__ul {
+  padding: 0;
+  list-style: none;
+}
+.footer__ul li {
+  padding: 5px 0;
+}
+.footer__ul li i {
+  padding: 0 10px 0 0;
+}
+.footer__ul li a {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

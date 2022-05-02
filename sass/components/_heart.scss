@@ -1,10 +1,25 @@
-.heart--like {    
-    &:hover:before {
-        background: linear-gradient(0deg, $secondary 0%, $primary 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 900;
-        display: initial;
-    }
-}
+// .heart--like:active {    
+//     animation: 2s ease-out 0s forwards fill;
+
+//     &::before {
+        
+//         background-clip: text;
+//         -webkit-background-clip: text;
+//         -webkit-text-fill-color: transparent;
+//         font-weight: 900;
+//         display: initial;
+//     }
+// }
+
+// .card__content__right i{
+//     position: absolute;
+
+//     &::before {
+//         content: '';
+//         height: 100%;
+//         width: 100%;
+//         top: 20px;
+//         left: 0;
+//         background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+//     }
+// }
