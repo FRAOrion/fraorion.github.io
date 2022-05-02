@@ -150,15 +150,18 @@ body {
   margin: 0 0 -50px 0;
 }
 .background--image img {
+  height: 270px;
+  object-fit: cover;
   z-index: -1;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+  row-gap: 30px;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
-  padding: 15px;
+  padding: 15px 15px 45px 15px;
 }
 .menu__top {
   display: flex;
@@ -209,17 +212,19 @@ body {
 }
 .menu__appetizers .menu__left--name {
   margin: 0 0 5px 0;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 .menu__appetizers .menu__left--desc {
-  font-weight: 300;
+  font-size: 0.9em;
+  font-weight: 400;
 }
 .menu__appetizers .menu__right {
   display: flex;
   align-items: flex-end;
 }
 .menu__appetizers .menu__right--price {
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 10px 0 0;
 }
 .menu__meal * {
@@ -241,17 +246,19 @@ body {
 }
 .menu__meal .menu__left--name {
   margin: 0 0 5px 0;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 .menu__meal .menu__left--desc {
-  font-weight: 300;
+  font-size: 0.9em;
+  font-weight: 400;
 }
 .menu__meal .menu__right {
   display: flex;
   align-items: flex-end;
 }
 .menu__meal .menu__right--price {
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 10px 0 0;
 }
 .menu__desserts * {
@@ -273,17 +280,19 @@ body {
 }
 .menu__desserts .menu__left--name {
   margin: 0 0 5px 0;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 .menu__desserts .menu__left--desc {
-  font-weight: 300;
+  font-size: 0.9em;
+  font-weight: 400;
 }
 .menu__desserts .menu__right {
   display: flex;
   align-items: flex-end;
 }
 .menu__desserts .menu__right--price {
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 10px 0 0;
 }
 
