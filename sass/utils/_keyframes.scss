@@ -49,3 +49,21 @@
         transform: translateX(0%);
     }
 }
+
+@keyframes heart-fill {
+    from {
+        transform: scale(0%);
+    }
+    to {
+        transform: scale(100%);
+    }
+}
+
+@keyframes opacity-0 {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+}
