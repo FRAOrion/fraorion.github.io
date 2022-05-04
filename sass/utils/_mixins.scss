@@ -22,7 +22,7 @@
         list-style: none;
         padding: 0;
 
-        li {
+        li:nth-child(1n+2) {
             margin: 15px 0;
             display: flex;
             flex-direction: row;

@@ -182,3 +182,13 @@ body {
         @include menu-stylin();
     }
 }
+
+.menu__li {
+    @for $i from 1 to 15 {
+        &--#{$i} {
+            opacity: 0;
+            animation: opacity-100 0.8s ease-in-out forwards;
+            animation-delay: 150ms * $i;
+        }
+    }
+}

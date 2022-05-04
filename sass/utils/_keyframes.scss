@@ -1,28 +1,28 @@
 @keyframes loader {
     0% {
-        opacity: 100%;
+        opacity: 1;
         backdrop-filter: blur(10px);
         transform: scale(1);
     }
     20% {
-        opacity: 100%;
+        opacity: 1;
     }
     50% {
-        opacity: 90%;
+        opacity: 0.9;
         backdrop-filter: blur(7px);
     }
     85%{
-        opacity: 10%;
+        opacity: 0.1;
     }
     90% {
         transform: scale(1);
     }
     99% {
-        opacity: 0%;
+        opacity: 0;
         backdrop-filter: blur(0px);
     }
     100% {
-        opacity: 0%;
+        opacity: 0;
         transform: scale(0);
     }
 }
@@ -41,11 +41,11 @@
 
 @keyframes fill {
     0% {
-        opacity: 0%;
+        opacity: 0;
         transform: translateX(-100%);
     }
     100% {
-        opacity: 100%;
+        opacity: 1;
         transform: translateX(0%);
     }
 }
@@ -61,9 +61,18 @@
 
 @keyframes opacity-0 {
     from {
-        opacity: 100%;
+        opacity: 1;
     }
     to {
-        opacity: 0%;
+        opacity: 0;
+    }
+}
+
+@keyframes opacity-100 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
