@@ -2,7 +2,7 @@
     0% {
         opacity: 100%;
         backdrop-filter: blur(10px);
-        transform: scale(100%);
+        transform: scale(1);
     }
     20% {
         opacity: 100%;
@@ -15,7 +15,7 @@
         opacity: 10%;
     }
     90% {
-        transform: scale(100%);
+        transform: scale(1);
     }
     99% {
         opacity: 0%;
@@ -23,7 +23,7 @@
     }
     100% {
         opacity: 0%;
-        transform: scale(0%);
+        transform: scale(0);
     }
 }
 
@@ -52,10 +52,10 @@
 
 @keyframes heart-fill {
     from {
-        transform: scale(0%);
+        transform: scale(0);
     }
     to {
-        transform: scale(100%);
+        transform: scale(1);
     }
 }
 
