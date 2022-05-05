@@ -13,10 +13,10 @@
         font-weight: 900;
         position: absolute;
         height: 24px;
-        display: flex;
-        align-items: center;
-        background: linear-gradient(0deg, $secondary 0%, $primary 100%);
-        background: -webkit-linear-gradient(0deg, $secondary 0%, $primary 100%);
+        display: inline;
+        line-height: 1;
+        background: linear-gradient(90deg, $secondary 0%, $primary 100%);
+        background: -webkit-linear-gradient(90deg, $secondary 0%, $primary 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

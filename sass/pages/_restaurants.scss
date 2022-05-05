@@ -1,0 +1,145 @@
+.background--image {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 -50px 0;
+    
+    img {
+        height: 270px;
+        object-fit: cover;
+        z-index: -1;
+
+        @media screen and (min-width: 768px) {
+            height: 450px;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    background-color: #f6f6f6;
+    border-radius: 40px 40px 0 0;
+    padding: 15px 15px 45px 15px;
+
+    @media screen and (min-width: 768px) {
+        padding: 50px 50px 80px 50px;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        
+        p {
+            margin: 0;
+        }
+
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 0 10px;
+        }
+    }
+
+    &__li {
+        @for $i from 1 to 15 {
+            &--#{$i} {
+                opacity: 0;
+                animation: opacity-100 0.8s ease-in-out forwards;
+                animation-delay: 150ms * $i;
+            }
+        }        
+    }
+
+    &__left {
+        padding: 10px;
+        overflow: hidden;
+
+        &--name {
+            margin: 0 0 5px 0;
+            font-size: 1.1em;
+            font-weight: 600;
+            @include text-wrap-dots();
+        }
+
+        &--desc {
+            font-size: 0.9em;
+            font-weight: 400;
+            @include text-wrap-dots();
+        }
+
+        p {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        transition: all 0.4s ease-in-out;
+        &--price {
+            width: 30px;
+            font-weight: 600;
+            padding: 0 15px 15px 0;
+            transition: width 0.4s;
+        }
+
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 100%;
+            width: 60px;
+            color: white;
+            background-color: $third;
+            border-radius: 0 15px 15px 0;
+            left: 45px;
+
+            &::before {
+                transition: all 0.4s ease-in-out;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+
+        .btn {
+            padding: 15px 50px;
+        }
+    }    
+
+    &__appetizers {
+        @include menu-stylin();
+    }
+
+    &__meal {
+        @include menu-stylin();
+    }
+
+    &__desserts {
+        @include menu-stylin();
+    }
+}
+
+.underline {
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+        content: '';
+        margin: 5px 0 0 0;
+        width: 40px;
+        border: 1px $third solid;
+    }
+}
