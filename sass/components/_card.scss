@@ -4,11 +4,6 @@
     background-color: white;
     border-radius: 15px;
     @include box-shadow;
-    @for $i from 1 to 5 {
-        &--#{$i} {
-            animation-delay: 0.2s * $i;
-        }
-    }
 
     &__img {
         position: relative;

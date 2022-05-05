@@ -1,3 +1,8 @@
+.heart--like {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
 .heart--like:hover {
     &::before {
         animation: opacity-0 0.3s 0.9s ease-out forwards;
@@ -11,6 +16,7 @@
         display: flex;
         align-items: center;
         background: linear-gradient(0deg, $secondary 0%, $primary 100%);
+        background: -webkit-linear-gradient(0deg, $secondary 0%, $primary 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
